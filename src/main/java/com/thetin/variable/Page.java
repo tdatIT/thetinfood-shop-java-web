@@ -10,6 +10,7 @@ public class Page {
     public static final String SIGNIN_PAGE ="VIEW/signin.jsp";
     public static final String DASHBOARD_PAGE ="VIEW/dashboard.jsp";
     public static final String CART_PAGE ="VIEW/cart.jsp";
+    public static final String SUCCESS_PAGE = "VIEW/ordersuccess.jsp";
     //servlet page
     public static final String TRANGCHU="/trang-chu";
     //error page

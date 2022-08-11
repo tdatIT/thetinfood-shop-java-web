@@ -7,11 +7,31 @@ public class Order {
     private String c_phone;
     private double total_amount;
     private Date create_day;
+    private String address;
+    private boolean status;
 
-    public Order(String c_phone, double total_amount, Date create_day) {
+    public Order(String c_phone, double total_amount, Date create_day, String address,boolean status) {
         this.c_phone = c_phone;
         this.total_amount = total_amount;
         this.create_day = create_day;
+        this.address = address;
+        this.status=status;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getId() {

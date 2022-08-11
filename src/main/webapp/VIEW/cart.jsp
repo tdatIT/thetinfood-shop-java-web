@@ -61,7 +61,7 @@
         <aside class="col-lg-9">
             <div class="card">
                 <div class="table-responsive">
-                    <c:if test="${item_list eq null}">
+                    <c:if test="${sessionScope.noItems eq 0}">
                         <div class="alert alert-warning" role="alert">
                             Giỏ hàng trống!!! Vui lòng chọn sản phẩm
                         </div>
@@ -169,14 +169,14 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="post" action="dat-hang">
-                                        <input type="text" class="form-control coupon" name=""
+                                    <form method="post" action="checkout">
+                                        <input type="text" class="form-control coupon" name="name"
                                                placeholder="Tên khách hàng">
                                         <br>
-                                        <input type="text" class="form-control coupon" name=""
+                                        <input type="text" class="form-control coupon" name="c_phone"
                                                placeholder="Số điện thoại">
                                         <br>
-                                        <textarea class="form-control coupon" name="message" rows="6" id="message"
+                                        <textarea class="form-control coupon" name="address" rows="6" id="message"
                                                   placeholder="Địa chỉ" required=""></textarea>
                                         <br>
                                         <button type="submit" id="form-submit" class="btn btn-success btn-main">Đặt
@@ -216,15 +216,14 @@
 
 <!-- Plugins -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="${pageContext.request.contextPath}/VIEW/assets/js/accordions.js"></script>
-<script src="${pageContext.request.contextPath}/VIEW/assets/js/datepicker.js"></script>
-<script src="${pageContext.request.contextPath}/VIEW/assets/js/scrollreveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js" integrity="sha512-cmWevKhVdrmcSQujnTmu7/vx8+vZHZaB/31156dH0QB456wDedM+ec2tIP36ktso0LoW0IksvbL/5seNqAPvOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js" integrity="sha512-cOGL6gI01KK2Bws211W8S3COhzrorBbzKvLPWYOVtSEYet3yG1fzJrimtwh8rUyvMy9qjgY2e7Rt6IwyaiX1Mg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="${pageContext.request.contextPath}/VIEW/assets/js/scrollreveal.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="${pageContext.request.contextPath}/VIEW/assets/js/imgfix.min.js"></script>
-<script src="${pageContext.request.contextPath}/VIEW/assets/js/slick.js"></script>
-<script src="${pageContext.request.contextPath}/VIEW/assets/js/lightbox.js"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.js" integrity="sha512-AcdgayNJFgi9/3XG5u9GgVXZSLpJKsv3TB+K+RYUgy7gZV3ZaufCy3CxT9YIvFmHhi9X4ixx1HFFRXfO68Cofg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.js" integrity="sha512-T4q98huxHUnqwRkmpQ6hPlb2XBzGVAVhhb18CF2aB2UYfRHg0XfKq3/TJgWGI4Qek3pZSbuXn57zcecbuC8z7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.js" integrity="sha512-t3uZr9npfaXgQdC/JqVbnYzxR6wM/GQ8iBjuBeJLgA/F1gAuWuuieV5JIEsd+mbbEsWuWj5Bh8q112Oc2gBb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Global Init -->
 <script src="${pageContext.request.contextPath}/VIEW/assets/js/custom.js"></script>

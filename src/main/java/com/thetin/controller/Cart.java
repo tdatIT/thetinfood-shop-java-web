@@ -23,6 +23,7 @@ public class Cart extends HttpServlet {
         if(session.getAttribute("session_cart")!=null){
             cartItem.setItems((ArrayList<Item>)session.getAttribute("session_cart"));
         }
+        session.setAttribute("noItems",cartItem.getQuantityCart());
         req.setAttribute("item_list",cartItem.getItems());
         req.setAttribute("total_price",cartItem.getPrice());
         try {
