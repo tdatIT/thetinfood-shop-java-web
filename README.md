@@ -1,3 +1,4 @@
 # thetin-food-shop
-Using JSP Servlet + Boostrap4 + jQuery
-Java 11 + Maven + MySQL 
+Frontend: Boostrap 4, jQuery, AJAX.</br>
+Backend: JSP/Servlet, Maven [JDK 11], JDBC, MySQL.
+-DatIT-
