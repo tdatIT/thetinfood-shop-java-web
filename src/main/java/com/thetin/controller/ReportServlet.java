@@ -1,6 +1,7 @@
 package com.thetin.controller;
 
 import com.thetin.dao.ReportDao;
+import com.thetin.mail.SendMail;
 import com.thetin.model.Report;
 import com.thetin.variable.Page;
 
@@ -29,6 +30,7 @@ public class ReportServlet extends HttpServlet {
             String message = (String)req.getParameter("message");
             Report rp = new Report(name,email,message);
             if(dao.insertReport(rp)){
+                SendMail.sendMailToEmail(email,name);
                 req.getRequestDispatcher(Page.SUBMIT_PAGE).forward(req,resp);
             }
             else{
